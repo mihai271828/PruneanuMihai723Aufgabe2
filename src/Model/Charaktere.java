@@ -6,6 +6,7 @@ public class Charaktere implements HasID {
     Integer id;
     String name;
     String Herkunftsort;
+    List<Produkte> Produkte;
 
     public Charaktere(Integer id, String name, String Herkunftsort) {
         this.id = id;
@@ -33,10 +34,18 @@ public class Charaktere implements HasID {
     public String getHerkunftsort() {
         return Herkunftsort;
     }
+    public List<Produkte> getProdukte() {
+        return this.Produkte;
+    }
+
 
     public void setHerkunftsort(String herkunftsort) {
         Herkunftsort = herkunftsort;
     }
+    public void addProdukt(Produkte Produkt) {
+        this.Produkte.add(Produkt);
+    }
+    public void delProdukt(Produkte Produkt) {this.Produkte.remove(Produkt);}
 
 
 
