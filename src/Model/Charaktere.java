@@ -6,12 +6,12 @@ public class Charaktere implements HasID {
     Integer id;
     String name;
     String Herkunftsort;
-    List<Produkte> products;
-    public Charaktere(Integer id, String name, String Herkunftsort, List<Produkte> products) {
+
+    public Charaktere(Integer id, String name, String Herkunftsort) {
         this.id = id;
         this.name = name;
         this.Herkunftsort = Herkunftsort;
-        this.products = products;
+
     }
 
     public Integer getID() {
@@ -38,13 +38,7 @@ public class Charaktere implements HasID {
         Herkunftsort = herkunftsort;
     }
 
-    public List<Produkte> getProducts() {
-        return products;
-    }
 
-    public void setProducts(List<Produkte> products) {
-        this.products = products;
-    }
 
     @Override
     public String toString() {
@@ -52,7 +46,7 @@ public class Charaktere implements HasID {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", Herkunftsort='" + Herkunftsort + '\'' +
-                ", products=" + products +
+
                 '}';
     }
 }
